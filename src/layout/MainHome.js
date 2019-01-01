@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 import Banner from '../components/Banner';
 import Products from '../components/Products';
 import ProductsSearch from '../components/ProductsSearch';
+import Title from '../components/Title';
 import { useApp } from '../context';
 
 const MainHome = () => {
@@ -12,6 +13,7 @@ const MainHome = () => {
         return (
             <MainHomeStyle>
                 <Banner />
+                <Title title="Sale" and="35%" />
                 <Products />
             </MainHomeStyle>
         );
