@@ -5,7 +5,7 @@ import Logo from './Logo';
 const NavBar = () => {
     return (
         <NavBarStyle>
-            <Logo />
+            <Logo primary />
         </NavBarStyle>
     );
 };
