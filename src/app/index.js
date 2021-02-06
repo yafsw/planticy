@@ -1,13 +1,16 @@
 import React, { memo, StrictMode } from 'react';
-import Home from '../page/Home';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { AppProvider } from '../context';
+import Home from '../page/Home';
 
 const App = () => {
     return (
         <StrictMode>
-            <AppProvider>
-                <Home />
-            </AppProvider>
+            <Router>
+                <AppProvider>
+                    <Home />
+                </AppProvider>
+            </Router>
         </StrictMode>
     );
 };

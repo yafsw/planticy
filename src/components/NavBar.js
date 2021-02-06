@@ -7,6 +7,7 @@ import Button from './Button';
 import Menu from './Menu';
 import Close from './Close';
 import { useApp } from '../context';
+import Basket from './Basket';
 
 const NavBar = () => {
     const { state, action } = useApp();
@@ -16,6 +17,9 @@ const NavBar = () => {
             <Logo primary />
             <Display width="100%" margin="0 1.2rem" >
                 <Input type="text" placeholder="Search" />
+            </Display>
+            <Display margin="0 1.2rem 0 0">
+                <Basket />
             </Display>
             <Display width="16rem" margin="0 .6rem 0 0">
                 <Button>Sign In</Button>

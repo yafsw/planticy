@@ -4,6 +4,7 @@ import { useApp } from '../context';
 import Display from './Display';
 import Input from './Input';
 import Button from './Button';
+import Basket from './Basket';
 
 const Bar = () => {
     const { state } = useApp();
@@ -11,7 +12,10 @@ const Bar = () => {
     return (
         <BarStyle show={state.bar}>
             <Display margin="1.2rem 0 0 0" width="100%" show>
-                <Input placehlder="Search" type="text" />
+                <Input placeholder="Search" type="text" />
+                <Display margin="0 0 0 .8rem" width="auto" show>
+                    <Basket />
+                </Display>
             </Display>
             <Display margin="1.2rem 0 0 0" width="100%" show>
                 <Button>Sign In</Button>
