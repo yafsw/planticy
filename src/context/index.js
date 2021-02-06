@@ -9,7 +9,7 @@ export const useApp = () => useContext(AppContext);
 export const AppProvider = props => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
-    const handleBar = useCallback(() => dispatch({type: 'HANLDE_BAR'}), []);
+    const handleBar = useCallback(() => dispatch({type: 'HANDLE_BAR'}), []);
 
     const action = { handleBar };
 

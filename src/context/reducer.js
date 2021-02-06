@@ -4,7 +4,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 bar: !state.bar
-            };
+            }
         default:
             throw new Error();
     }

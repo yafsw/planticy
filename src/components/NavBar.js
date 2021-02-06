@@ -5,8 +5,12 @@ import Display from './Display';
 import Input from './Input';
 import Button from './Button';
 import Menu from './Menu';
+import Close from './Close';
+import { useApp } from '../context';
 
 const NavBar = () => {
+    const { state, action } = useApp();
+
     return (
         <NavBarStyle>
             <Logo primary />
@@ -20,7 +24,9 @@ const NavBar = () => {
                 <Button primary>Sign Up</Button>
             </Display>
             <Display show>
-                <Menu />
+                <span onClick={action.handleBar}>
+                    {state.bar ? <Close /> : <Menu />}
+                </span>
             </Display>
         </NavBarStyle>
     );
@@ -33,6 +39,12 @@ const NavBarStyle = Styled.nav`
     align-items: center;
     width: 100%;
     max-width: 128rem;
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export default memo(NavBar);

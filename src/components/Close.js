@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
-import { CgClose } from "react-iscons/cg";
+import { CgClose } from "react-icons/cg";
 import { primary, tertiary } from '../config/color';
 
 const Close = () => {
