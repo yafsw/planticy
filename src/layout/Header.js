@@ -1,11 +1,13 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
+import Bar from '../components/Bar';
 import NavBar from '../components/NavBar';
 
 const Header = () => {
     return (
         <HeaderStyle>
             <NavBar />
+            <Bar />
         </HeaderStyle>
     );
 };
