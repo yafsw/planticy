@@ -14,10 +14,10 @@ const ButtonStyle = Styled.button`
     border: none;
     outline: none;
     padding: .8rem; 1.4rem;
-    font0size: 1.6rem;
+    font-size: 1.6rem;
     font-weight: bold;
     width: 100%;
-    border-radius: .2rem;
+    border-radius: 4rem;
     border: .2rem solid ${primary};
     color: ${props => props.primary ? 'white' : primary};
     background-color: ${props => props.primary ? primary : 'white'};
