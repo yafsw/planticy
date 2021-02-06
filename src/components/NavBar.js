@@ -4,6 +4,7 @@ import Logo from './Logo';
 import Display from './Display';
 import Input from './Input';
 import Button from './Button';
+import Menu from './Menu';
 
 const NavBar = () => {
     return (
@@ -17,6 +18,9 @@ const NavBar = () => {
             </Display>
             <Display width="16rem">
                 <Button primary>Sign Up</Button>
+            </Display>
+            <Display show>
+                <Menu />
             </Display>
         </NavBarStyle>
     );
