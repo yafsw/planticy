@@ -14,9 +14,9 @@ const MainHomeStyle = Styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: cennter;
+    align-items: center;
     width: 100%;
-    paddng: 1.2rem;
+    padding: 1.2rem;
     color: white;
 `;
 
