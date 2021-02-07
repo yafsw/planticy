@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
-import { secodary } from '../config';
+import { secodary } from '../config/color';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import banner from '../data/banner';
