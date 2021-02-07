@@ -1,10 +1,11 @@
 import React, { memo } from 'react';
-import Styled from 'styled-components;'
+import Styled from 'styled-components';
+import Banner from '../components/Banner';
 
 const MainHome = () => {
     return (
         <MainHomeStyle>
-
+            <Banner />
         </MainHomeStyle>
     );
 };
