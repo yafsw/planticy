@@ -6,7 +6,7 @@ import { FaShoppingBag } from 'react-icons/fa';
 
 const Basket = () => {
     return (
-        <BasketContainer>
+        <BasketContainer to="/basket">
             <BasketStyle />
             <span>0</span>
         </BasketContainer>
