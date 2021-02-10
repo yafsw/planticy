@@ -1,11 +1,13 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
 import Banner from '../components/Banner';
+import Products from '../components/Products';
 
 const MainHome = () => {
     return (
         <MainHomeStyle>
             <Banner />
+            <Products />
         </MainHomeStyle>
     );
 };
