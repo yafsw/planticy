@@ -14,7 +14,7 @@ const NavBar = () => {
 
     return (
         <NavBarStyle>
-            <Logo primary />
+            <Logo primary="true" />
             <Display width="100%" margin="0 1.2rem" >
                 <Input type="text" placeholder="Search" />
             </Display>
