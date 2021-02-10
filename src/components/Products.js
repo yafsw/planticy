@@ -7,16 +7,16 @@ const Products = () => {
     return (
         <ProductsStyle>
             {products.map(item => (
-                <Product src={item.src} name={item.name} key={item.id} price={item.price} payload={item} />
+                <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
             ))}
             {products.map(item => (
-                <Product src={item.src} name={item.name} key={item.id} price={item.price} payload={item} />
+                <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
             ))}
             {products.map(item => (
-                <Product src={item.src} name={item.name} key={item.id} price={item.price} payload={item} />
+                <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
             ))}
             {products.map(item => (
-                <Product src={item.src} name={item.name} key={item.id} price={item.price} payload={item} />
+                <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
             ))}
         </ProductsStyle>
     );
