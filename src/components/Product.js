@@ -6,7 +6,7 @@ import Button from './Button';
 const Product = props => {
     return (
         <ProductStyle src={props.src}>
-            <span>{props.price}</span>
+            <span>${props.price}</span>
             <Button primary >{props.name}</Button>
         </ProductStyle>
     );
@@ -39,6 +39,7 @@ const ProductStyle = Styled.div`
         background-color: rgba(245,245,245,.8);
         border-radius: 4rem;
         transition: .3s ease-in-out;
+        color: black; 
 
         &:hover {
             background-color: white;
