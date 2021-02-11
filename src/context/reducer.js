@@ -4,7 +4,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 bar: !state.bar
-            }
+            };
+        case 'HANDLE_SEARCH':
+            return {
+                ...state,
+                search: action.payload
+            };
         default:
             throw new Error();
     }
