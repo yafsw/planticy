@@ -1,5 +1,6 @@
 const state = {
-    bar: false
+    bar: false,
+    search: ''
 };
 
 export default state;
