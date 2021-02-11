@@ -16,7 +16,7 @@ const NavBar = () => {
         <NavBarStyle>
             <Logo primary="true" />
             <Display width="100%" margin="0 1.2rem" >
-                <Input type="text" placeholder="Search" />
+                <Input type="text" placeholder="Search" onChange={action.handleSearch} />
             </Display>
             <Display margin="0 1.2rem 0 0">
                 <Basket />
