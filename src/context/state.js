@@ -1,6 +1,7 @@
 const state = {
     bar: false,
-    search: ''
+    search: '',
+    basket: []
 };
 
 export default state;
