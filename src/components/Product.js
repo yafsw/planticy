@@ -2,10 +2,13 @@ import React, { memo } from 'react';
 import Styled from 'styled-components';
 import { secondary } from '../config/color';
 import Button from './Button';
+import { useApp } from "../context";
 
 const Product = props => {
+    const { action } = useApp();
+
     return (
-        <ProductStyle src={props.src}>
+        <ProductStyle src={props.src} onClick={() => action.handleAddBasket(props.payload)}>
             <span>${props.price}</span>
             <Button primary >{props.name}</Button>
         </ProductStyle>
