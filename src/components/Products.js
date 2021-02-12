@@ -2,12 +2,15 @@ import React, { memo } from 'react';
 import Styled from 'styled-components';
 import products from '../data/products';
 import Product from './Product';
+import { useApp } from '../context';
 
 const Products = () => {
+    const { action } = useApp;
+
     return (
         <ProductsStyle>
             {products.map(item => (
-                <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
+                <Product src={item.url} name={item.name} key={item.id} price={item.price} onClick={action.handleAddBasket(item)} />
             ))}
             {products.map(item => (
                 <Product src={item.url} name={item.name} key={item.id} price={item.price} payload={item} />
