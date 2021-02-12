@@ -10,9 +10,16 @@ export const AppProvider = props => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     const handleBar = useCallback(() => dispatch({type: 'HANDLE_BAR'}), []);
-    const handleSearch = useCallback(event => dispatch({type: 'HANDLE_SEARCH', payload: event.target.value}), []);
+    const handleSearch = useCallback(event => dispatch({ type: 'HANDLE_SEARCH', payload: event.target.value }), []);
+    const handleAddBasket = useCallback(payload => dispatch({ type: 'ADD_BASKET', payload: payload }), []);
+    const handleRemoveBasket = useCallback(payload => dispatch({type: 'REMOVE_BASKET', payload: payload}), []);
 
-    const action = { handleBar, handleSearch };
+    const action = {
+        handleBar,
+        handleSearch,
+        handleAddBasket,
+        handleRemoveBasket
+    };
 
     return (
         <AppContext.Provider value={{state, action}}>
