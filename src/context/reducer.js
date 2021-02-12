@@ -10,6 +10,21 @@ const reducer = (state, action) => {
                 ...state,
                 search: action.payload
             };
+        case 'ADD_BASKET':
+            return {
+                ...state,
+                basket: [
+                    ...state.basket,
+                    action.payload
+                ]
+            }
+        case 'REMOVE_BASKET':
+            return {
+                ...state,
+                basket: state.basket.filter(item => {
+                    return item.name !== action.payload.name
+                })
+            }
         default:
             throw new Error();
     }
