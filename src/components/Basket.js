@@ -3,12 +3,16 @@ import Styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { primary, secondary, tertiary } from '../config/color';
 import { FaShoppingBag } from 'react-icons/fa';
+import { useApp } from '../context';
 
 const Basket = () => {
+    const { state } = useApp();
+    const basket = state.basket.length
+
     return (
         <BasketContainer to="/basket">
             <BasketStyle />
-            <span>0</span>
+            <span>{basket}</span>
         </BasketContainer>
     );
 };
