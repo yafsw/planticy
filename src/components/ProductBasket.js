@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import Styled from 'styled-components';
 import { primary, secondary, tertiary } from '../config/color';
 import { useApp } from '../context';
+import Close from './Close';
 
 const ProductBasket = props => {
     const { action } = useApp();
