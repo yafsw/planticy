@@ -17,14 +17,19 @@ const reducer = (state, action) => {
                     ...state.basket,
                     action.payload
                 ]
-            }
+            };
         case 'REMOVE_BASKET':
             return {
                 ...state,
                 basket: state.basket.filter(item => {
                     return item.name !== action.payload.name
                 })
-            }
+            };
+        case 'RESET_BASKET':
+            return {
+                ...state,
+                basket: []
+            };
         default:
             throw new Error();
     }
