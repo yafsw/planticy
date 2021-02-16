@@ -19,9 +19,11 @@ const ProductsBasket = () => {
             ))}
             {state.basket.length === 0
                 ? null : (
-                <Button primary onClick={action.handleResetBasket}>
-                    Checkout ${price}
-                </Button>
+                <Span>
+                    <Button primary onClick={action.handleResetBasket}>
+                        Checkout ${price}
+                    </Button>
+                </Span>
                 ) 
             }
         </ProductsBasketStyle>
@@ -35,6 +37,14 @@ const ProductsBasketStyle = Styled.section`
     align-items: center;
     width: 100%;
     max-width: 128rem;
+`;
+
+const Span = Styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.2rem;
 `;
 
 export default memo(ProductsBasket);
