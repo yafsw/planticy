@@ -19,7 +19,7 @@ const ProductBasket = props => {
                 </div>
                 <span className="price">${props.price}</span>
             </div>
-            <span className="close" onClick={action.handleRemoveBasket}>
+            <span className="close" onClick={() => action.handleRemoveBasket(props.name)}>
                 <Close />
             </span>
         </ProductBasketStyle>
@@ -129,6 +129,7 @@ const ProductBasketStyle = Styled.div`
         position: absolute;
         top: 1.2rem;
         right: 1.2rem;
+        cursor: pointer;
     }
 `;
 
