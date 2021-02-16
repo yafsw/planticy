@@ -1,5 +1,6 @@
 import React, { memo, StrictMode } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Basket from '../page/Basket';
 import { AppProvider } from '../context';
 import Home from '../page/Home';
 
@@ -8,7 +9,10 @@ const App = () => {
         <StrictMode>
             <Router>
                 <AppProvider>
-                    <Home />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/basket" component={Basket} />
+                    </Switch>
                 </AppProvider>
             </Router>
         </StrictMode>
