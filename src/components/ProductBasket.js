@@ -36,7 +36,7 @@ const ProductBasketStyle = Styled.div`
     border-radius: 3rem;
     overflow: hidden;
     box-shadow: 0 1.2rem 3rem rgba(0,175,145,.03);
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 0 0;
     position: relative;
     transition: .3s ease-in-out;
 
