@@ -14,8 +14,8 @@ const ProductsBasketSearch = () => {
 
     return (
         <ProductsBasketSearchStyle>
-            {productsState.map(item => (
-                <ProductBasket src={item.url} name={item.name} price={item.price} key={item.id} />
+            {productsState.map((item, index) => (
+                <ProductBasket src={item.url} name={item.name} price={item.price} key={index} />
             ))}
         </ProductsBasketSearchStyle>
     );
