@@ -1,16 +1,29 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
 import ProductBasket from './ProductBasket';
+import Button from './Button';
 import { useApp } from '../context';
 
 const ProductsBasket = () => {
-    const { state } = useApp();
+    const { state, action } = useApp();
+    const calculate = () => {
+        state.basket.forEach(item => price += item.price);
+    };
+    let price = 0;
+    calculate();
 
     return (
         <ProductsBasketStyle>
             {state.basket.map((item, index) => (
                 <ProductBasket category={item.category} src={item.url} name={item.name} price={item.price} key={index} />
             ))}
+            {state.basket.length === 0
+                ? null : (
+                <Button primary onClick={action.handleResetBasket}>
+                    Checkout ${price}
+                </Button>
+                ) 
+            }
         </ProductsBasketStyle>
     );
 };
