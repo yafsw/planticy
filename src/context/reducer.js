@@ -22,7 +22,7 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket: state.basket.filter(item => {
-                    return item.name !== action.payload.name
+                    return item.name !== action.payload
                 })
             };
         case 'RESET_BASKET':
