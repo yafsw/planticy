@@ -1,18 +1,16 @@
 import React, { memo } from 'react';
 import Styled from 'styled-components';
-import { useApp } from '../context';
 import ProductBasket from './ProductBasket';
+import { useApp } from '../context';
 
 const ProductsBasket = () => {
     const { state } = useApp();
 
     return (
         <ProductsBasketStyle>
-            <div>
-                {state.basket.map((item, index) => (
-                    <ProductBasket category={item.category} src={item.url} name={item.name} price={item.price} key={index} />
-                ))}
-            </div>
+            {state.basket.map((item, index) => (
+                <ProductBasket category={item.category} src={item.url} name={item.name} price={item.price} key={index} />
+            ))}
         </ProductsBasketStyle>
     );
 };
