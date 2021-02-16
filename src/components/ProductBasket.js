@@ -34,6 +34,7 @@ const ProductBasketStyle = Styled.div`
     width: 100%;
     border: .2rem solid ${primary};
     border-radius: 3rem;
+    overflow: hidden;
     box-shadow: 0 1.2rem 3rem rgba(0,175,145,.03);
     margin: 1.2rem 0;
     position: relative;
@@ -51,9 +52,11 @@ const ProductBasketStyle = Styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         border-radius: 3rem 0 0 3rem;
         height: 14rem;
         min-width: 12rem;
+        overflow: hidden;
 
         @media(max-width: 24rem) {
             width: 100%;
@@ -65,10 +68,11 @@ const ProductBasketStyle = Styled.div`
     .text {
         display: flex;
         flex-direction: column;
-        justify-content; space-between;
+        justify-content: space-between;
         align-items: flex-start;
         height: 14rem;
         padding: 1.6rem;
+        overflow: hidden;
         width: 100%;
 
         @media(max-width: 24rem) {
@@ -86,7 +90,7 @@ const ProductBasketStyle = Styled.div`
             transition: .3s ease-in-out;
 
             &:hover {
-                padding: 0; 
+                padding: 0;
             }
         }
 
@@ -118,7 +122,7 @@ const ProductBasketStyle = Styled.div`
             &:hover {
                 background-color: ${tertiary};
             }
-        }
+        }   
     }
 
     .close {
@@ -128,8 +132,8 @@ const ProductBasketStyle = Styled.div`
     }
 `;
 
-const Image = Styled.img`
-    background-color: ${secondary};
+const Image = Styled.span`
+        background-color: ${secondary};
         background-image: url('${props => props.src}');
         background-image: linear-gradient(rgba(0, 121, 101, 0), rgba(0, 121, 101, .2)), url('${props => props.src}');
         background-size: cover;

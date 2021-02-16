@@ -30,7 +30,6 @@ const MainBasketStyle = Styled.main`
     width: 100%;
     padding: 1.2rem;
     min-height: 100vh;
-    color: white;
 `;
 
 export default memo(MainBasket);
