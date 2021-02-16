@@ -4,7 +4,7 @@ import { primary, tertiary } from '../config/color';
 
 const Button = props => {
     return (
-        <ButtonStyle primary={props.primary}>
+        <ButtonStyle primary={props.primary} onClick={props.onClick}>
             {props.children}
         </ButtonStyle>
     );
