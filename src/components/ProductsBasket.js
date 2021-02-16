@@ -10,14 +10,7 @@ const ProductsBasket = () => {
         <ProductsBasketStyle>
             <div>
                 {state.basket.map((item, index) => (
-                    <ProductBasket
-                        src={item.url}
-                        name={item.name}
-                        category={item.category}
-                        price={item.price}
-                        key={index}
-                        payload={item}
-                    />
+                    <ProductBasket category={item.category} src={item.url} name={item.name} price={item.price} key={index} />
                 ))}
             </div>
         </ProductsBasketStyle>
