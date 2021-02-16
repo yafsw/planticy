@@ -12,13 +12,15 @@ export const AppProvider = props => {
     const handleBar = useCallback(() => dispatch({type: 'HANDLE_BAR'}), []);
     const handleSearch = useCallback(event => dispatch({ type: 'HANDLE_SEARCH', payload: event.target.value }), []);
     const handleAddBasket = useCallback(item => dispatch({ type: 'ADD_BASKET', payload: item }), []);
-    const handleRemoveBasket = useCallback(item => dispatch({type: 'REMOVE_BASKET', payload: item}), []);
+    const handleRemoveBasket = useCallback(item => dispatch({ type: 'REMOVE_BASKET', payload: item }), []);
+    const handleResetBasket = useCallback(() => dispatch({type: 'RESET_BASKET'}), []);
 
     const action = {
         handleBar,
         handleSearch,
         handleAddBasket,
-        handleRemoveBasket
+        handleRemoveBasket,
+        handleResetBasket,
     };
 
     return (
