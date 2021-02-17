@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 import { useApp } from '../context';
 import ProductsBasket from '../components/ProductsBasket';
 import ProductsBasketSearch from '../components/ProductsBasketSearch';
+import Title from '../components/Title';
 
 const MainBasket = () => {
     const { state } = useApp();
@@ -10,6 +11,7 @@ const MainBasket = () => {
     if (state.search === '') {
         return (
             <MainBasketStyle>
+                <Title title="Basket" and={state.basket.length + ' Item'} />
                 <ProductsBasket />
             </MainBasketStyle>
         );
